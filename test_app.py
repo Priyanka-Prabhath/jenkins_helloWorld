@@ -1,8 +1,8 @@
-from app import add
+from app import add, subtract
 
 
 def test_add():
     assert add(2, 3) == 5
 
 def test_subtract():
-    assert add(2, 3) == 5
+    assert subtract(2, 3) == 5
