@@ -1,5 +1,13 @@
-def add(a, b):
-    return a + b
+from fastapi import FastAPI
 
-def subtract(a,b):
-    return a-b
+app = FastAPI()
+
+
+@app.get("/")
+def hello():
+    return {"message": "Hello from Docker!"}
+
+
+@app.get("/add")
+def add(a: int, b: int):
+    return {"result": a + b}
