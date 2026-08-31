@@ -3,6 +3,12 @@ pipeline {
 
     stages {
 
+        stage('Check Docker') {
+            steps {
+                bat 'docker --version'
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
                 bat 'pip install -r requirements.txt'
